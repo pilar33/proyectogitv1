@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+<div class="container">
+<div class="row"><h1>{{ titulo }}</h1></div>
+<div
+    class="table-responsive"
+>
+    <table
+        class="table table-primary"
+    >
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for c in object_list %}
+            <tr class="">
+                <td>{{ c.snombre}}</td>
+                <td>{{ c.sapellido }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</div>
+
+
+{% endblock content %} 
